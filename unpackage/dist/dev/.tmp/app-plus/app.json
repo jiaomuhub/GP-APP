@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/answer/answer",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#f18109",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/home.png",
+        "selectedIconPath": "static/image/home-act.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "iconPath": "static/image/news.png",
+        "selectedIconPath": "static/image/news-act.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/answer/answer",
+        "iconPath": "static/image/wen.png",
+        "selectedIconPath": "static/image/wen-act.png",
+        "text": "问答"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/image/my.png",
+        "selectedIconPath": "static/image/my-act.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "splashscreen": {
+    "autoclose": true
+  },
+  "appname": "GP-APP"
+}

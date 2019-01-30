@@ -1,0 +1,77 @@
+
+.content {
+	text-align: center;
+	height: 400rpx;
+}
+.user-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 30rpx;
+	height: 250rpx;
+	background-image: -webkit-gradient(linear, left top, right top, from(#167fc4), to(#3ebfe0));
+	background-image: -o-linear-gradient(left, #167fc4, #3ebfe0);
+	background-image: linear-gradient(to right, #167fc4, #3ebfe0);
+	color: #fff;
+	padding: 50rpx 30rpx 0;
+}
+.user-box image {
+	display: block;
+	width: 110rpx;
+	height: 110rpx;
+	border-radius: 50%;
+	margin-right: 30rpx;
+}
+.user-box view {
+	text-align: left;
+}
+.user-box view ._div {
+	padding-top: 10rpx;
+}
+.user-box view text {
+	font-size: 26rpx;
+	color: #bfd6eb;
+}
+.pic-box {
+	position: relative;
+	width: 100%;
+	height: 267rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.pic-box .pic-big {
+	width: 92%;
+	height: 367rpx;
+	position: absolute;
+	top: -100rpx;
+	left: 30rpx;
+}
+.item-bc {
+	width: 100%;
+	background-color: #f6fafe;
+}
+.item-box {
+	width: 92%;
+	margin: 0 30rpx;
+	background-color: #fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.item-box ._div{
+	width: 25%;
+	padding: 30rpx 0;
+	font-size: 24rpx;
+}
+.icon-style {
+	color: #4fc5d3;
+	font-size: 50rpx;
+}
+

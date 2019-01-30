@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+@font-face {
+  font-family: 'eosfont';  /* project id 1032723 */
+  src: url('//at.alicdn.com/t/font_1032723_5gkhkaqssvp.eot');
+  src: url('//at.alicdn.com/t/font_1032723_5gkhkaqssvp.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1032723_5gkhkaqssvp.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1032723_5gkhkaqssvp.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1032723_5gkhkaqssvp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1032723_5gkhkaqssvp.svg#eosfont') format('svg');
+}
+.eosfont {
+  font-family: "eosfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.eos-xitongguanli:before {
+  content: "\E64B";
+}
+.eos-pingjia:before {
+  content: "\E639";
+}
+.eos-book1:before {
+  content: "\E631";
+}
+.eos-search:before {
+  content: "\E64C";
+}
+.eos-folder:before {
+  content: "\E60F";
+}
+.eos-zhuanhuan:before {
+  content: "\E664";
+}
+.eos-kaoqinbiao:before {
+  content: "\E622";
+}
+.eos-liebiao:before {
+  content: "\E600";
+}
+.eos-jilu:before {
+  content: "\E604";
+}
+.eos-jichuxinxi:before {
+  content: "\E625";
+}
+page, page {
+	width: 100%;
+	height: 100%;
+}
+.containter {
+	margin-top: calc(var(--status-bar-height) + 44px);
+}
+

@@ -1,0 +1,7 @@
+body, html {
+	width: 100%;
+	height: 100%;
+}
+.containter {
+	margin-top: calc(var(--status-bar-height) + 44px);;
+}
