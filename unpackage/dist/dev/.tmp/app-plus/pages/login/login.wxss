@@ -11,13 +11,16 @@
 	        box-sizing: border-box;
 	padding: 500rpx 140rpx !important;
 }
+.first-input {
+	margin-top: 30rpx;
+}
 .content .login-box .user {
 	border-radius: 40rpx;
 	background-color: #FFFFFF;
 	height: 70rpx;
 	line-height: 70rpx;
 	padding: 0 30rpx;
-	margin: 30rpx 0;
+	/* margin: 10upx 0; */
 	font-size: 30rpx;
 }
 .login-btn {

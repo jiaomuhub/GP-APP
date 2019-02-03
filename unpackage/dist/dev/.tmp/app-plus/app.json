@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/login/login",
+    "pages/news/news",
     "pages/answer/answer",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/upload/upload",
+    "pages/outline/outline",
+    "pages/login/login",
+    "pages/tests/tests"
   ],
   "subPackages": [],
   "tabBar": {
@@ -19,7 +23,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/login/login",
+        "pagePath": "pages/news/news",
         "iconPath": "static/image/news.png",
         "selectedIconPath": "static/image/news-act.png",
         "text": "消息"

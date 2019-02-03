@@ -25,11 +25,11 @@
 					<text class="eosfont icon-style">&#xe625;</text>
 					<p>基础参数管理</p>
 				</div>
-				<div>
+				<div @click="goItemPage('dg')">
 					<text class="eosfont icon-style">&#xe60b;</text>
 					<p>大纲管理</p>
 				</div>
-				<div>
+				<div @click="goItemPage('rz')">
 					<text class="eosfont icon-style">&#xe604;</text>
 					<p>个人规培记录</p>
 				</div>
@@ -41,7 +41,7 @@
 					<text class="eosfont icon-style">&#xe664;</text>
 					<p>轮转管理</p>
 				</div>
-				<div>
+				<div @click="goItemPage('st')">
 					<text class="eosfont icon-style">&#xe631;</text>
 					<p>教学活动管理</p>
 				</div>
@@ -83,10 +83,31 @@
 			this.tips = e
 		},
 		onLoad() {
-
+			let _token = uni.getStorageSync('token');
+			if(_token == '') {
+				uni.navigateTo({
+					url: '/pages/login/login'
+				})
+			}
 		},
 		methods: {
-
+			goItemPage(item) {
+				if(item == 'dg') {
+					uni.navigateTo({
+						url: '/pages/outline/outline'
+					})
+				}
+				if(item == 'rz') {
+					uni.navigateTo({
+						url: '/pages/upload/upload'
+					})
+				}
+				if(item == 'st') {
+					uni.navigateTo({
+						url: '/pages/tests/tests'
+					})
+				}
+			}
 		}
 	}
 </script>

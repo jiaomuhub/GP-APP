@@ -30,7 +30,11 @@ export default {
 		goBack: function(code) {
 			if(code == '&#xe600;') {
 				console.log('xiala');
-			}else {
+			}
+			if(code == '&#xe690;') {
+				console.log('add');
+			}
+			if(code == 'back'){
 				uni.navigateBack({
 					delta: 1
 				});
@@ -58,6 +62,7 @@ export default {
     position: fixed;
     top: 0;
 	color: #fff;
+	z-index: 10;
 }
 .info {
 	height: 44px;

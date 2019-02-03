@@ -21,6 +21,7 @@
     position: fixed;
     top: 0;
 	color: #fff;
+	z-index: 10;
 }
 .info {
 	height: 44px;

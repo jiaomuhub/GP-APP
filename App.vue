@@ -11,9 +11,9 @@
 		}
 	}
 </script>
-
 <style>
 	/*每个页面公共css */
 	@import "./static/eosfont.css";
+	@import "./static/css/uni.css";
 	@import "./static/css/common.css";
 </style>

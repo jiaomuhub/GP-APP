@@ -1,17 +1,17 @@
 <template>
 	<view class="content" style="background: url(../../static/image/login.png) no-repeat;background-size: 100% 100%;">
 		<form @submit="formSubmit" class="login-box">
-			<view class="uni-form-item uni-column">
+			<view class="uni-form-item uni-column first-input">
 				<input class="uni-input user" name="input" type="text" v-model="formData.username" placeholder="账号" />
 			</view>
 			<view class="uni-form-item uni-column">
 				<input class="uni-input user" name="input" type="password"  v-model="formData.password" placeholder="密码" />
 			</view>
-			<view class="uni-form-item uni-column">
+			<!-- <view class="uni-form-item uni-column">
 				<picker class="user" @change="bindPickerChange" :value="index" :range="array" placeholder="医院">
 					<view class="uni-input">{{array[index]}}</view>
 				</picker>
-			</view>
+			</view> -->
 			<view class="uni-btn-v">
 				<button class="login-btn" formType="submit">登录</button>
 			</view>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+	import comm from '../../static/js/common.js';
 	export default {
 		data() {
 			return {
@@ -41,11 +42,44 @@
 			},
 			formSubmit: function() {
 				let that = this;
-				console.log(this.formData)
-				console.log(this.index)
 				if(that.verification()) {
-					uni.navigateTo({
-						url: '/pages/index/index'
+					let param = {
+						username: that.formData.username,
+						password: that.formData.password
+					}
+					uni.request({
+						url: comm.host_gp + "/auth/login",
+						data: param,
+						method: 'POST',
+						success: function (res) {
+							res = res.data;
+							if(res.code == 0) {
+								uni.setStorageSync('token', res.data.token);
+								uni.showToast({
+									title: '登录成功',
+									icon: 'none',
+									duration: 2000
+								})
+								setTimeout(function() {
+									uni.switchTab({
+										url: '/pages/index/index'
+									})
+								}, 100)
+							}else {
+								uni.showToast({
+									title: res.msg,
+									icon: 'none',
+									duration: 2000
+								})
+							}
+						},
+						fail: function (res) {
+							uni.showToast({
+								title: res.data.msg,
+								icon: 'none',
+								duration: 2000
+							})
+						}
 					})
 				};
 			},
@@ -75,14 +109,14 @@
 					});
 					return false
 				}
-				if(that.index == '') {
+				/* if(that.index == '') {
 					uni.showToast({
 						title: '请选择医院',
 						icon: 'none',
 						duration: 2000
 					});
 					return false
-				}
+				} */
 				return true;
 			}
 		}
@@ -102,13 +136,16 @@
 		padding: 500upx 140upx !important;
 		
 	}
+	.first-input {
+		margin-top: 30upx;
+	}
 	.content .login-box .user {
 		border-radius: 40upx;
 		background-color: #FFFFFF;
 		height: 70upx;
 		line-height: 70upx;
 		padding: 0 30upx;
-		margin: 30upx 0;
+		/* margin: 10upx 0; */
 		font-size: 30upx;
 	}
 	.login-btn {
