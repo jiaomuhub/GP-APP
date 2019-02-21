@@ -26,7 +26,7 @@ class Request {
 				url: `${url}`,
 				data: Object.assign({}, params),
 				method: 'POST',
-				headers: {
+				header: {
 					'Authorization': _token //自定义请求头信息
 				},
 				success: function (res) {
@@ -47,7 +47,7 @@ class Request {
 			},
 			fail: function (res) {
 			}
-		})  
+		})
 	}
   json2Form(json) {
     var str = []

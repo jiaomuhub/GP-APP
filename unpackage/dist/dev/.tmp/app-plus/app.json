@@ -7,7 +7,8 @@
     "pages/upload/upload",
     "pages/outline/outline",
     "pages/login/login",
-    "pages/tests/tests"
+    "pages/tests/tests",
+    "pages/resetPwd/resetPwd"
   ],
   "subPackages": [],
   "tabBar": {
@@ -43,7 +44,8 @@
     ]
   },
   "splashscreen": {
-    "autoclose": true
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
   },
   "appname": "GP-APP"
 }

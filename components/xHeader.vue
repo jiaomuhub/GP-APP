@@ -48,11 +48,20 @@ export default {
 </script>
 
 <style>
+/*  #ifdef  APP-PLUS*/
 .page-searchList {
     justify-content: center;
     align-items: center;
 	height: calc(var(--status-bar-height) + 44px);
 }
+/*  #endif  */
+/*  #ifdef  H5*/
+.page-searchList {
+    justify-content: center;
+    align-items: center;
+	height: 44px;
+}
+/*  #endif  */
 .statusBar {
 	width: 100%;
 }

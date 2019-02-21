@@ -65,6 +65,15 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/resetPwd/resetPwd",
+			"style": {
+				"backgroundColor": "#f6fafe",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"tabBar": {

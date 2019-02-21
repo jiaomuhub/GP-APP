@@ -1,4 +1,54 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .page-searchList {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -10,6 +60,8 @@
             align-items: center;
 	height: calc(var(--status-bar-height) + 44px);
 }
+
+
 .statusBar {
 	width: 100%;
 }

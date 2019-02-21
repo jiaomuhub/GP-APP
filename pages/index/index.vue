@@ -2,10 +2,10 @@
 	<view class="content">
 		<x-header :iconh="iconh" :titleh="titleh"></x-header>
 		<view class="user-box">
-			<image src="../../static/image/logo.png"></image>
+			<image src="../../static/image/dulin-setting/head.png"></image>
 			<view>
-				<div>张三</div>
-				<text>超级管理员</text> 
+				<div>{{userInfo.userRealName || '未设置'}}</div>
+				<text>{{userInfo.departmentName || '部门未设置'}}</text> 
 			</view>
 		</view>
 		<view class="pic-box">
@@ -67,13 +67,15 @@
 </template>
 
 <script>
-	import xHeader from "../../components/xHeader.vue"
+	import xHeader from "../../components/xHeader.vue";
+	import comm from '../../static/js/common.js';
 	export default {
 		data() {
 			return {
 				titleh: '全科助理培训管理平台',
 				iconh: '&#xe600;',
-				tips: ''
+				tips: '',
+				userInfo: {}
 			}
 		},
 		components: {
@@ -83,10 +85,16 @@
 			this.tips = e
 		},
 		onLoad() {
+			let that = this;
 			let _token = uni.getStorageSync('token');
 			if(_token == '') {
 				uni.navigateTo({
 					url: '/pages/login/login'
+				})
+			}else{
+				comm.post(comm.host_gp + "/api/f/user/get").then(function(res) {
+					res = res.data;
+					that.userInfo = res;
 				})
 			}
 		},
@@ -136,6 +144,7 @@
 		text-align: left;
 	}
 	.user-box view div {
+		font-size: 30upx;
 		padding-top: 10upx;
 	}
 	.user-box view text {
