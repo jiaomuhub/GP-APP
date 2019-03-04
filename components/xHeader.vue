@@ -41,7 +41,10 @@ export default {
 			}
 		},
 		goSearch: function(code) {
-			this.tips = code
+			this.tips = code;
+			uni.navigateTo({
+				url: '/pages/HM-search/HM-search'
+			})
 		},
 	}
 };

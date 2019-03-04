@@ -5,7 +5,7 @@
 			<image src="../../static/image/dulin-setting/head.png"></image>
 			<view>
 				<div>{{userInfo.userRealName || '未设置'}}</div>
-				<text>{{userInfo.departmentName || '部门未设置'}}</text> 
+				<text>{{userInfo.title || '未设置'}}</text> 
 			</view>
 		</view>
 		<view class="pic-box">
@@ -13,7 +13,7 @@
 		</view>
 		<view class="item-bc">
 			<view class="item-box">
-				<div>
+				<div @click="goItemPage('bg')">
 					<text class="eosfont icon-style">&#xe60f;</text>
 					<p>我的办公</p>
 				</div>
@@ -100,22 +100,49 @@
 		},
 		methods: {
 			goItemPage(item) {
-				if(item == 'dg') {
-					uni.navigateTo({
-						url: '/pages/outline/outline'
-					})
+				if(item == 'bg') {
+					uni.showActionSheet({
+						itemList: ['工作督导', '教学文档管理', '设备管理'],
+						success: function (res) {
+							if(res.tapIndex + 1 == 1) {
+								uni.navigateTo({
+									url: '/pages/workReview/workReview'
+								})
+							}
+						},
+						fail: function (res) {
+							console.log(res.errMsg);
+						}
+					});
 				}
-				if(item == 'rz') {
-					uni.navigateTo({
-						url: '/pages/upload/upload'
-					})
-				}
-				if(item == 'st') {
-					uni.navigateTo({
-						url: '/pages/tests/tests'
-					})
-				}
-			}
+// 				uni.navigateTo({
+// 					url: '/pages/subPage/subPage?id='+ item
+// 				})
+// 				if(item == 'bg') {
+// 					uni.navigateTo({
+// 						url: '/pages/outline/outline'
+// 					})
+// 				}
+// 				if(item == 'dg') {
+// 					uni.navigateTo({
+// 						url: '/pages/outline/outline'
+// 					})
+// 				}
+// 				if(item == 'rz') {
+// 					uni.navigateTo({
+// 						url: '/pages/upload/upload'
+// 					})
+// 				}
+// 				if(item == 'st') {
+// 					uni.navigateTo({
+// 						url: '/pages/tests/tests'
+// 					})
+// 				}
+			},
+			bindPickerChange: function(e) {
+				console.log('picker发送选择改变，携带值为', e.target.value)
+				this.index = e.target.value
+			},
 		}
 	}
 </script>

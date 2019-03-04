@@ -15,12 +15,12 @@
 /*每个页面公共css */
 @font-face {
   font-family: 'eosfont';  /* project id 1032723 */
-  src: url('//at.alicdn.com/t/font_1032723_972pzxv7r2.eot');
-  src: url('//at.alicdn.com/t/font_1032723_972pzxv7r2.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1032723_972pzxv7r2.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1032723_972pzxv7r2.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1032723_972pzxv7r2.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1032723_972pzxv7r2.svg#eosfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1032723_ro3wd25uvr.eot');
+  src: url('//at.alicdn.com/t/font_1032723_ro3wd25uvr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1032723_ro3wd25uvr.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1032723_ro3wd25uvr.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1032723_ro3wd25uvr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1032723_ro3wd25uvr.svg#eosfont') format('svg');
 }
 .eosfont {
   font-family: "eosfont" !important;

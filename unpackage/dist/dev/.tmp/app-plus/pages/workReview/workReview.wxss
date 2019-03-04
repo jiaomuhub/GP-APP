@@ -1,0 +1,132 @@
+
+.my-tabs {
+	/* height: 88upx; */
+	font-size: 28rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-top: 2rpx solid #dddddd;
+	border-bottom: 2rpx solid #dddddd;
+	min-width: 100%;
+	overflow-x: auto;
+}
+.my-tabs .tab-item{
+	line-height: 48rpx;
+	padding: 20rpx;
+	min-width: 100rpx;
+	text-align: center;
+}
+.my-tabs .tab-item.active{
+	position: relative;
+	color: #3682FF;
+}
+.my-tabs .tab-item.active::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	width: 100%;
+	border-bottom: 4rpx solid #3682FF;
+	-webkit-animation: test ease 1 1.5s;
+	        animation: test ease 1 1.5s;
+}
+.my-tabs.space-between{
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+@-webkit-keyframes test{
+0%{width: 100%}
+50%{width: 150%}
+100%{width: 100%}
+}
+@keyframes test{
+0%{width: 100%}
+50%{width: 150%}
+100%{width: 100%}
+}
+
+
+page {
+	background-color: #f7f7f7;
+}
+.content {
+	text-align: center;
+	height: 400rpx;
+}
+.item-box {
+	width: 92%;
+	margin: 0 30rpx;
+	background-color: #fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.item-box ._div{
+	width: 30%;
+	padding: 30rpx 0;
+	font-size: 24rpx;
+}
+.icon-style {
+	color: #4fc5d3;
+	font-size: 50rpx;
+}
+.out-bc {
+	height: 250rpx;
+}
+.out-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: #fff;
+	border-radius: 10rpx;
+	width: 100%;
+	padding: 30rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin-bottom: 30rpx;
+}
+.out-item ._h1 {
+	color: #666;
+	font-size: 30rpx;
+}
+.out-item ._p {
+	color: #666;
+	font-size: 26rpx;
+}
+.out-item ._h2 {
+	color: #999;
+	font-size: 26rpx;
+	padding-top: 10rpx;
+}
+.out-item>._div:not(.out-first) {
+	margin: 0 10rpx;
+}
+.out-first {
+	width: 66%;
+	text-align: left;
+}
+.icon-style {
+	font-size: 40rpx;
+}
+.out-edit, .out-edit>._p {
+	color: #d16e0e !important;
+}
+

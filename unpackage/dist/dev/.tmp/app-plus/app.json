@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/workReview/workReview",
     "pages/news/news",
     "pages/answer/answer",
     "pages/my/my",
@@ -8,7 +9,8 @@
     "pages/outline/outline",
     "pages/login/login",
     "pages/tests/tests",
-    "pages/resetPwd/resetPwd"
+    "pages/resetPwd/resetPwd",
+    "pages/HM-search/HM-search"
   ],
   "subPackages": [],
   "tabBar": {
