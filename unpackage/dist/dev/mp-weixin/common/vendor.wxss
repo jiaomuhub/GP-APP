@@ -1,0 +1,85 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.statusBar {
+	width: 100%;
+}
+.header {
+    background-image: -webkit-gradient(linear, left top, right top, from(#167fc4), to(#3ebfe0));
+    background-image: -o-linear-gradient(left, #167fc4, #3ebfe0);
+    background-image: linear-gradient(to right, #167fc4, #3ebfe0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+	color: #fff;
+	z-index: 10;
+}
+.info {
+	height: 44px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+	padding: 0 30rpx;
+}
+

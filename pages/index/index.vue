@@ -45,12 +45,12 @@
 					<text class="eosfont icon-style">&#xe631;</text>
 					<p>教学活动管理</p>
 				</div>
-				<div>
+				<div @click="goItemPage('kq')">
 					<text class="eosfont icon-style">&#xe622;</text>
 					<p>考勤管理</p>
 				</div>
 				<div>
-					<text class="eosfont icon-style">&#xe639;</text>
+					<text class="eosfont icon-style">&#xe63f;</text>
 					<p>评价管理</p>
 				</div>
 				<div>
@@ -107,6 +107,31 @@
 							if(res.tapIndex + 1 == 1) {
 								uni.navigateTo({
 									url: '/pages/workReview/workReview'
+								})
+							}
+							if(res.tapIndex + 1 == 2) {
+								uni.navigateTo({
+									url: '/pages/teachingDoc/teachingDoc'
+								})
+							}
+						},
+						fail: function (res) {
+							console.log(res.errMsg);
+						}
+					});
+				}
+				if(item == 'kq') {
+					uni.showActionSheet({
+						itemList: ['考勤查询', '考勤审批', '考勤违纪', '我的考勤', '我的请假'],
+						success: function (res) {
+							if(res.tapIndex + 1 == 1) {
+								uni.navigateTo({
+									url: '/pages/checkWork/checkWork'
+								})
+							}
+							if(res.tapIndex + 1 == 2) {
+								uni.navigateTo({
+									url: '/pages/approval/approval'
 								})
 							}
 						},

@@ -1,0 +1,38 @@
+
+.content {
+	width: 100%;
+	height: 100%;
+}
+.content .login-box {
+	height: 100%;
+	width: 100%;
+	display: block;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 500rpx 140rpx !important;
+}
+.first-input {
+	margin-top: 30rpx;
+}
+.content .login-box .user {
+	border-radius: 40rpx;
+	background-color: #FFFFFF;
+	height: 70rpx;
+	line-height: 70rpx;
+	padding: 0 30rpx;
+	/* margin: 10upx 0; */
+	font-size: 30rpx;
+}
+.login-btn {
+	height: 70rpx;
+	line-height: 70rpx;
+	border-radius: 40rpx;
+	background-color: #66d354;
+	color: #fff;
+	margin-top: 60rpx;
+	font-size: 40rpx;
+}
+uni-page-body, uni-page-refresh {
+	height: 100%;
+}
+

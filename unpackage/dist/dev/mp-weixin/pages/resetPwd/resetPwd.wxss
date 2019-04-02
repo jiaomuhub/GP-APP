@@ -1,0 +1,91 @@
+
+page {
+	background-color: #e8ebf2;
+}
+.content {
+	text-align: center;
+	height: 400rpx;
+}
+.out-bc {
+	height: 250rpx;
+	background-image: -webkit-gradient(linear, left top, right top, from(#167fc4), to(#3ebfe0));
+	background-image: -o-linear-gradient(left, #167fc4, #3ebfe0);
+	background-image: linear-gradient(to right, #167fc4, #3ebfe0);
+	padding: 50rpx 30rpx 0;
+}
+.out-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: #fff;
+	border-radius: 10rpx;
+	width: 100%;
+	padding: 30rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin-bottom: 30rpx;
+}
+.form-style {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	color: #666;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.form-style>text {
+	display: block;
+	text-align: left;
+	height: 80rpx;
+	width: 16%;
+	line-height: 80rpx;
+}
+.form-style ._input, .form-style ._textarea{
+	border: 1px solid #f5f5f5;
+	-webkit-box-shadow: 0 0 20rpx #eee;
+	        box-shadow: 0 0 20rpx #eee;
+	width: 80%;
+	text-align: left;
+}
+.submit-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	margin-top: 50rpx;
+}
+.submit-box ._button {
+	font-size: 32rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	width: 200rpx;
+	margin: 0 30rpx;
+	border-radius: 30rpx;
+	border: none;
+	color: #fff;
+}
+.submit-box ._button:nth-child(1) {
+	background-color: #50aff1;
+}
+.submit-box ._button:nth-child(2) {
+	background-color: #f1a400;
+}
+

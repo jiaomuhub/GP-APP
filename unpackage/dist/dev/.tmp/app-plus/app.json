@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/workReview/workReview",
+    "pages/teachingDoc/teachingDoc",
+    "pages/checkWork/checkWork",
+    "pages/approval/approval",
     "pages/news/news",
     "pages/answer/answer",
     "pages/my/my",

@@ -1,79 +1,18 @@
 <template>
 	<view class="content">
 		<x-header :iconh="iconh" :titleh="titleh"></x-header>
-		<top-tab @change="updateTab" :modelData="sendData"></top-tab>、
+		<top-tab @change="updateTab" :modelData="sendData"></top-tab>
 		<view class="out-bc">
-			<view class="out-item">
-				<div class="out-first">
-					<h1>黄磊</h1>
-					<h2>病理科</h2>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe642;</text>
-					<p>查看</p>
-				</div>
-				<div class="out-edit">
-					<text class="eosfont icon-style">&#xe60e;</text>
-					<p>编辑</p>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe606;</text> 
-					<p>删除</p>
-				</div>
-			</view>
-			<view class="out-item">
-				<div class="out-first">
-					<h1>临床医疗服务相关课程</h1>
-					<h2>专业细则</h2>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe642;</text>
-					<p>查看</p>
-				</div>
-				<div class="out-edit">
-					<text class="eosfont icon-style">&#xe60e;</text>
-					<p>编辑</p>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe606;</text> 
-					<p>删除</p>
-				</div>
-			</view>
-			<view class="out-item">
-				<div class="out-first">
-					<h1>临床医疗服务相关课程</h1>
-					<h2>专业细则</h2>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe642;</text>
-					<p>查看</p>
-				</div>
-				<div class="out-edit">
-					<text class="eosfont icon-style">&#xe60e;</text>
-					<p>编辑</p>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe606;</text> 
-					<p>删除</p>
-				</div>
-			</view>
-			<view class="out-item">
-				<div class="out-first">
-					<h1>临床医疗服务相关课程</h1>
-					<h2>专业细则</h2>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe642;</text>
-					<p>查看</p>
-				</div>
-				<div class="out-edit">
-					<text class="eosfont icon-style">&#xe60e;</text>
-					<p>编辑</p>
-				</div>
-				<div>
-					<text class="eosfont icon-style">&#xe606;</text> 
-					<p>删除</p>
-				</div>
+			<view class="out-item" v-for="item in items" :key="item.name">
+				<view class="top-item">
+					<h1 style="color: #d16e0e">{{item.name}}</h1>
+					<h2>{{item.ks}}</h2>
+				</view>
+				<view class="bottom-item">
+					<p v-if="item.lebal1">{{item.lebal1}}:{{item.num1}}</p>
+					<p v-if="item.lebal2">{{item.lebal2}}:{{item.num2}}</p>
+					<p v-if="item.lebal3">{{item.lebal3}}:{{item.num3}}</p>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -95,6 +34,18 @@
 					{label:"导师监督"},
 					{label:"学员监督"},
 					{label:"科室监督"},
+				],
+				items: [
+					{
+						lebal1: '历史带教人数',
+						lebal2: '已出科人数',
+						lebal3: '当前规培人数',
+						name: '黄磊',
+						ks: '病理科',
+						num1: '0',
+						num2: '3',
+						num3: '3',
+					},
 				]
 			}
 		},
@@ -112,25 +63,73 @@
 			}
 		},
 		methods: {
-			goItemPage(item) {
-				if(item == 'dg') {
-					uni.navigateTo({
-						url: '/pages/outline/outline'
-					})
-				}
-				if(item == 'rz') {
-					uni.navigateTo({
-						url: '/pages/upload/upload'
-					})
-				}
-				if(item == 'st') {
-					uni.navigateTo({
-						url: '/pages/tests/tests'
-					})
-				}
-			},
 			updateTab (data) {
-				console.log(data);
+				if(data == 0) {
+					this.items = [
+						{
+							lebal1: '历史带教人数',
+							lebal2: '已出科人数',
+							lebal3: '当前规培人数',
+							name: '黄磊',
+							ks: '病理科',
+							num1: '0',
+							num2: '3',
+							num3: '3',
+						},
+					]
+				}
+				if(data == 1) {
+					this.items = [
+						{
+							lebal1: '历史跟师人数',
+							lebal2: '当前跟师人数',
+							name: '白永国',
+							ks: '18711112222',
+							num1: '0',
+							num2: '3',
+						},{
+							lebal1: '历史跟师人数',
+							lebal2: '当前跟师人数',
+							name: '白永国',
+							ks: '18711112222',
+							num1: '0',
+							num2: '3',
+						},
+					]
+				}
+				if(data == 2) {
+					this.items = [
+						{
+							lebal1: '当前轮转科室',
+							lebal2: '已轮转科室数',
+							name: '测试',
+							ks: '临床医学',
+							num1: '神经内科',
+							num2: '3',
+						},{
+							lebal1: '当前轮转科室',
+							lebal2: '已轮转科室数',
+							name: '测试',
+							ks: '临床医学',
+							num1: '神经内科',
+							num2: '3',
+						},
+					]
+				}
+				if(data == 3) {
+					this.items = [
+						{
+							lebal1: '带教老师人数',
+							lebal2: '已出科人数',
+							lebal3: '当前规培人数',
+							name: '熊俊红',
+							ks: '内科',
+							num1: '0',
+							num2: '3',
+							num3: '3',
+						},
+					]
+				}
 			}
 		}
 	}
@@ -166,13 +165,16 @@
 		height: 250upx;
 	}
 	.out-item {
-		display: flex;
 		background-color: #fff;
 		border-radius: 10upx;
 		width: 100%;
-		padding: 30upx;
+		padding: 18upx 30upx;
 		box-sizing: border-box;
 		margin-bottom: 30upx;
+	}
+	.top-item, .bottom-item {
+		display: flex;
+		justify-content: space-between;
 	}
 	.out-item h1 {
 		color: #666;
@@ -186,13 +188,6 @@
 		color: #999;
 		font-size: 26upx;
 		padding-top: 10upx;
-	}
-	.out-item>div:not(.out-first) {
-		margin: 0 10upx;
-	}
-	.out-first {
-		width: 66%;
-		text-align: left;
 	}
 	.icon-style {
 		font-size: 40upx;

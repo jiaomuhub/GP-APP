@@ -1,0 +1,4 @@
+<import src="/components/xHeader.vue.wxml" />
+<import src="/components/top-tab/top-tab.vue.wxml" />
+<import src="/components/mehaotian-search-revision/mehaotian-search-revision.vue.wxml" />
+

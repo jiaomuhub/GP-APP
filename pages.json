@@ -17,6 +17,30 @@
 				}
 			}
 		},{
+			"path": "pages/teachingDoc/teachingDoc",
+			"style": {
+				"backgroundColor": "#f6fafe",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/checkWork/checkWork",
+			"style": {
+				"backgroundColor": "#f6fafe",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/approval/approval",
+			"style": {
+				"backgroundColor": "#f6fafe",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
 			"path": "pages/news/news", 
 			"style": {
 				"app-plus": {
